@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c14" />
+      <stop offset="50%" stop-color="#0b111e" />
+      <stop offset="100%" stop-color="#05080e" />
+    </linearGradient>
+
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" />
+      <stop offset="100%" stop-color="#00ff66" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00ff66" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0b0f19" stop-opacity="0.95" />
+    </linearGradient>
+
+    <linearGradient id="radarSweep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#00ff66" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Filters for Neon Glow -->
+    <filter id="neonGlowCyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.4" />
+      <circle cx="40" cy="40" r="1" fill="#00e5ff" fill-opacity="0.3" />
+    </pattern>
+
+    <pattern id="dotMatrix" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="1" fill="#334155" fill-opacity="0.5" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+    @keyframes scanlineMove {
+      0% { transform: translateY(-100px); }
+      100% { transform: translateY(400px); }
+    }
+    @keyframes hudBlink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0.2; }
+    }
+    .pulsing-dot { animation: pulseDot 2s infinite ease-in-out; transform-origin: center; }
+    .hud-blinker { animation: hudBlink 1.2s infinite; }
+    .mono-font { font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace; }
+    .sans-font { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif; }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="380" rx="16" fill="url(#bgGradient)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Cyber Grid Background -->
+  <rect width="1200" height="380" rx="16" fill="url(#cyberGrid)" />
+  <rect x="750" y="20" width="410" height="340" fill="url(#dotMatrix)" opacity="0.35" rx="12" />
+
+  <!-- Top Accent Glowing Strip -->
+  <path d="M 16 0 L 1184 0" stroke="url(#accentCyan)" stroke-width="3" filter="url(#subtleGlow)" />
+
+  <!-- Cybernetic Hex/Diagonal Accent Lines -->
+  <path d="M 0 60 L 90 0 M 1200 320 L 1110 380" stroke="#00e5ff" stroke-width="1.5" stroke-opacity="0.4" />
+  <path d="M 1150 0 L 1200 50 M 0 330 L 50 380" stroke="#00ff66" stroke-width="1.5" stroke-opacity="0.3" />
+
+  <!-- ================= LEFT: PROFILE & CORE BADGE ================= -->
+  <!-- Top Terminal Pill / Operational Status -->
+  <g transform="translate(60, 48)">
+    <rect width="320" height="30" rx="15" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <circle cx="16" cy="15" r="4.5" fill="#00ff66" class="pulsing-dot" filter="url(#subtleGlow)" />
+    <text x="32" y="20" fill="#00ff66" font-size="11" font-weight="700" letter-spacing="1.5" class="mono-font">SYS_STATUS: ACTIVE // ROOT ACCESS</text>
+    <rect x="294" y="9" width="12" height="12" rx="3" fill="#1e293b" />
+    <text x="297" y="18" fill="#64748b" font-size="9" class="mono-font">⚡</text>
+  </g>
+
+  <!-- Main Name Title -->
+  <g transform="translate(60, 140)">
+    <text x="0" y="0" fill="#ffffff" font-size="46" font-weight="900" letter-spacing="1.5" class="sans-font">
+      KARTIK GURUNG
+    </text>
+    <text x="440" y="-8" fill="#00e5ff" font-size="16" font-weight="700" class="mono-font" filter="url(#subtleGlow)">[ v2.4.0 ]</text>
+  </g>
+
+  <!-- Subtitle / Identity -->
+  <g transform="translate(60, 180)">
+    <text x="0" y="0" fill="#00e5ff" font-size="18" font-weight="700" letter-spacing="2" class="mono-font">
+      CYBERSECURITY SPECIALIST &amp; SECURITY RESEARCHER
+    </text>
+  </g>
+
+  <!-- Core Focus Pills / Tags -->
+  <g transform="translate(60, 215)">
+    <!-- Tag 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="145" height="28" rx="6" fill="#0f172a" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.6" />
+      <circle cx="12" cy="14" r="3" fill="#00e5ff" />
+      <text x="24" y="18" fill="#e2e8f0" font-size="11" font-weight="600" class="mono-font">Network Defense</text>
+    </g>
+
+    <!-- Tag 2 -->
+    <g transform="translate(155, 0)">
+      <rect width="165" height="28" rx="6" fill="#0f172a" stroke="#00ff66" stroke-width="1" stroke-opacity="0.6" />
+      <circle cx="12" cy="14" r="3" fill="#00ff66" />
+      <text x="24" y="18" fill="#e2e8f0" font-size="11" font-weight="600" class="mono-font">Penetration Testing</text>
+    </g>
+
+    <!-- Tag 3 -->
+    <g transform="translate(330, 0)">
+      <rect width="150" height="28" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.6" />
+      <circle cx="12" cy="14" r="3" fill="#38bdf8" />
+      <text x="24" y="18" fill="#e2e8f0" font-size="11" font-weight="600" class="mono-font">Digital Forensics</text>
+    </g>
+
+    <!-- Tag 4 -->
+    <g transform="translate(490, 0)">
+      <rect width="140" height="28" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1" stroke-opacity="0.6" />
+      <circle cx="12" cy="14" r="3" fill="#a855f7" />
+      <text x="24" y="18" fill="#e2e8f0" font-size="11" font-weight="600" class="mono-font">Threat Hunting</text>
+    </g>
+  </g>
+
+  <!-- Interactive Terminal Prompt Preview -->
+  <g transform="translate(60, 275)">
+    <rect width="630" height="60" rx="8" fill="#090d16" stroke="#1e293b" stroke-width="1" />
+    <!-- Traffic lights -->
+    <circle cx="18" cy="16" r="4" fill="#ef4444" opacity="0.8" />
+    <circle cx="32" cy="16" r="4" fill="#eab308" opacity="0.8" />
+    <circle cx="46" cy="16" r="4" fill="#10b981" opacity="0.8" />
+    <text x="65" y="19" fill="#64748b" font-size="10" class="mono-font">bash — 80x24</text>
+    <!-- Prompt -->
+    <text x="18" y="44" fill="#00ff66" font-size="13" font-weight="600" class="mono-font">kartik@sentinel:~$</text>
+    <text x="180" y="44" fill="#f8fafc" font-size="13" class="mono-font">./netvision --analyze --interface eth0 --stealth</text>
+    <rect x="585" y="32" width="8" height="15" fill="#00e5ff" class="hud-blinker" />
+  </g>
+
+  <!-- ================= RIGHT: CYBER TELEMETRY HUD ================= -->
+  <g transform="translate(730, 48)">
+    <!-- HUD Card Frame -->
+    <rect width="410" height="287" rx="12" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1.2" />
+    <rect width="410" height="32" rx="12" fill="#0b111e" stroke="#1e293b" stroke-width="1" />
+    
+    <!-- HUD Header -->
+    <text x="20" y="21" fill="#38bdf8" font-size="11" font-weight="700" letter-spacing="1" class="mono-font">
+      ⌖ TELEMETRY &amp; CRYPTOGRAPHIC HUD
+    </text>
+    <circle cx="385" cy="16" r="4" fill="#00ff66" class="pulsing-dot" />
+
+    <!-- Metric Row 1: Encryption Cipher -->
+    <g transform="translate(20, 52)">
+      <text x="0" y="14" fill="#94a3b8" font-size="11" class="mono-font">CIPHER SUITE</text>
+      <text x="130" y="14" fill="#00e5ff" font-weight="700" font-size="11" class="mono-font">AES-256-GCM | TLS 1.3</text>
+      <line x1="0" y1="24" x2="370" y2="24" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+    </g>
+
+    <!-- Metric Row 2: Defense Architecture -->
+    <g transform="translate(20, 88)">
+      <text x="0" y="14" fill="#94a3b8" font-size="11" class="mono-font">PRIMARY ENGINE</text>
+      <text x="130" y="14" fill="#00ff66" font-weight="700" font-size="11" class="mono-font">NetVision Core Daemon</text>
+      <line x1="0" y1="24" x2="370" y2="24" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+    </g>
+
+    <!-- Metric Row 3: Education & Track -->
+    <g transform="translate(20, 124)">
+      <text x="0" y="14" fill="#94a3b8" font-size="11" class="mono-font">ACADEMIC TRACK</text>
+      <text x="130" y="14" fill="#f8fafc" font-weight="600" font-size="11" class="mono-font">B.Tech CSE (Cybersecurity)</text>
+      <line x1="0" y1="24" x2="370" y2="24" stroke="#1e293b" stroke-width="1" stroke-dasharray="4 4" />
+    </g>
+
+    <!-- Metric Row 4: Network Stream Activity Visualizer -->
+    <g transform="translate(20, 160)">
+      <text x="0" y="12" fill="#64748b" font-size="10" font-weight="600" class="mono-font">PACKET INSPECTION SPECTRUM</text>
+      <!-- Mini waveform / bar analyzer -->
+      <g transform="translate(0, 24)">
+        <rect x="0" y="8" width="8" height="24" rx="2" fill="#00e5ff" opacity="0.9" />
+        <rect x="14" y="2" width="8" height="30" rx="2" fill="#00ff66" opacity="0.9" />
+        <rect x="28" y="14" width="8" height="18" rx="2" fill="#00e5ff" opacity="0.6" />
+        <rect x="42" y="5" width="8" height="27" rx="2" fill="#38bdf8" opacity="0.8" />
+        <rect x="56" y="18" width="8" height="14" rx="2" fill="#1e293b" />
+        <rect x="70" y="0" width="8" height="32" rx="2" fill="#00ff66" opacity="0.95" />
+        <rect x="84" y="10" width="8" height="22" rx="2" fill="#00e5ff" opacity="0.75" />
+        <rect x="98" y="6" width="8" height="26" rx="2" fill="#38bdf8" opacity="0.85" />
+        <rect x="112" y="15" width="8" height="17" rx="2" fill="#00ff66" opacity="0.6" />
+        <rect x="126" y="3" width="8" height="29" rx="2" fill="#00e5ff" opacity="0.9" />
+        <rect x="140" y="12" width="8" height="20" rx="2" fill="#1e293b" />
+        <rect x="154" y="7" width="8" height="25" rx="2" fill="#00ff66" opacity="0.8" />
+        <rect x="168" y="1" width="8" height="31" rx="2" fill="#00e5ff" opacity="1" filter="url(#subtleGlow)" />
+        <rect x="182" y="11" width="8" height="21" rx="2" fill="#38bdf8" opacity="0.7" />
+        <rect x="196" y="16" width="8" height="16" rx="2" fill="#1e293b" />
+        <rect x="210" y="4" width="8" height="28" rx="2" fill="#00ff66" opacity="0.85" />
+        <rect x="224" y="9" width="8" height="23" rx="2" fill="#00e5ff" opacity="0.8" />
+        <rect x="238" y="13" width="8" height="19" rx="2" fill="#38bdf8" opacity="0.7" />
+        <rect x="252" y="2" width="8" height="30" rx="2" fill="#00ff66" opacity="0.9" />
+        <rect x="266" y="8" width="8" height="24" rx="2" fill="#00e5ff" opacity="0.8" />
+        <rect x="280" y="17" width="8" height="15" rx="2" fill="#1e293b" />
+        <rect x="294" y="5" width="8" height="27" rx="2" fill="#00ff66" opacity="0.85" />
+        <rect x="308" y="0" width="8" height="32" rx="2" fill="#00e5ff" opacity="1" />
+        <rect x="322" y="10" width="8" height="22" rx="2" fill="#38bdf8" opacity="0.75" />
+        <rect x="336" y="14" width="8" height="18" rx="2" fill="#00ff66" opacity="0.6" />
+        <rect x="350" y="6" width="8" height="26" rx="2" fill="#00e5ff" opacity="0.85" />
+        <rect x="364" y="12" width="8" height="20" rx="2" fill="#1e293b" />
+      </g>
+    </g>
+
+    <!-- Bottom Status Bar -->
+    <g transform="translate(20, 240)">
+      <rect width="370" height="26" rx="6" fill="#090d16" stroke="#1e293b" stroke-width="0.8" />
+      <text x="12" y="17" fill="#64748b" font-size="10" class="mono-font">INTEGRITY HASH:</text>
+      <text x="110" y="17" fill="#00e5ff" font-size="10" class="mono-font">SHA256: 7f83b165...e3b0c44298</text>
+    </g>
+  </g>
+
+  <!-- Corner Brackets (HUD Tech aesthetic) -->
+  <path d="M 24 36 L 24 24 L 36 24" stroke="#00e5ff" stroke-width="2" fill="none" />
+  <path d="M 1176 36 L 1176 24 L 1164 24" stroke="#00e5ff" stroke-width="2" fill="none" />
+  <path d="M 24 344 L 24 356 L 36 356" stroke="#00ff66" stroke-width="2" fill="none" />
+  <path d="M 1176 344 L 1176 356 L 1164 356" stroke="#00ff66" stroke-width="2" fill="none" />
+</svg>
+
