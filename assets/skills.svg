@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="100%">
   <defs>
     <linearGradient id="skillsBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#080A0F" />
@@ -7,15 +7,18 @@
 
     <linearGradient id="panelHeader" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00E5FF" />
-      <stop offset="60%" stop-color="#00E5FF" stop-opacity="0.3" />
+      <stop offset="60%" stop-color="#00C8FF" stop-opacity="0.3" />
       <stop offset="100%" stop-color="#FF304F" />
     </linearGradient>
   </defs>
 
   <style>
     .s-mono { font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace; }
-    .s-cat { fill: #00E5FF; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; }
-    .s-chip { fill: #e2e8f0; font-size: 10px; font-weight: 600; }
+    .s-cat-cyan { fill: #00E5FF; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; }
+    .s-cat-red { fill: #FF304F; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; }
+    .s-chip-body { fill: #D1D5DB; font-size: 10px; font-weight: 600; }
+    .s-chip-white { fill: #FFFFFF; font-size: 10px; font-weight: 700; }
+    .s-chip-red { fill: #FF304F; font-size: 10px; font-weight: 700; }
   </style>
 
   <!-- Frame Background -->
@@ -25,10 +28,10 @@
   <rect width="900" height="34" rx="8" fill="#111722" stroke="#162032" stroke-width="1" />
   <line x1="0" y1="34" x2="900" y2="34" stroke="url(#panelHeader)" stroke-width="1.2" />
   
-  <text x="24" y="21" fill="#00E5FF" font-size="11" font-weight="700" letter-spacing="1.5" class="s-mono">
+  <text x="24" y="21" fill="#00C8FF" font-size="11" font-weight="700" letter-spacing="1.5" class="s-mono">
     [ TECHNICAL ARSENAL ] :: DEFENSIVE &amp; OFFENSIVE CAPABILITIES
   </text>
-  <text x="876" y="21" fill="#8B949E" font-size="10" font-weight="600" text-anchor="end" class="s-mono">
+  <text x="876" y="21" fill="#9CA3AF" font-size="10" font-weight="600" text-anchor="end" class="s-mono">
     VERIFIED RIG // SEC-INDEX: 99.4%
   </text>
 
@@ -39,26 +42,26 @@
     <g transform="translate(0, 10)">
       <rect width="852" height="62" rx="4" fill="#111722" stroke="#1c283c" stroke-width="1" />
       <line x1="0" y1="0" x2="4" y2="62" stroke="#00E5FF" stroke-width="4" />
-      <text x="18" y="22" class="s-mono s-cat">[+] NETWORK DEFENSE &amp; DEEP PACKET INSPECTION</text>
+      <text x="18" y="22" class="s-mono s-cat-cyan">[+] NETWORK DEFENSE &amp; DEEP PACKET INSPECTION</text>
       <!-- Chips -->
       <g transform="translate(18, 30)">
         <rect x="0" y="0" width="88" height="22" rx="3" fill="#162234" stroke="#00E5FF" stroke-width="0.8" />
-        <text x="44" y="15" text-anchor="middle" class="s-mono s-chip">Wireshark</text>
+        <text x="44" y="15" text-anchor="middle" class="s-mono s-chip-white">Wireshark</text>
         
         <rect x="96" y="0" width="70" height="22" rx="3" fill="#162234" stroke="#00E5FF" stroke-width="0.8" />
-        <text x="131" y="15" text-anchor="middle" class="s-mono s-chip">Nmap</text>
+        <text x="131" y="15" text-anchor="middle" class="s-mono s-chip-white">Nmap</text>
 
         <rect x="174" y="0" width="86" height="22" rx="3" fill="#162234" stroke="#FF304F" stroke-width="0.8" />
-        <text x="217" y="15" text-anchor="middle" class="s-mono s-chip" fill="#FF304F">Snort IDS</text>
+        <text x="217" y="15" text-anchor="middle" class="s-mono s-chip-red">Snort IDS</text>
 
         <rect x="268" y="0" width="134" height="22" rx="3" fill="#162234" stroke="#00E5FF" stroke-width="0.8" />
-        <text x="335" y="15" text-anchor="middle" class="s-mono s-chip">NetVision Daemon</text>
+        <text x="335" y="15" text-anchor="middle" class="s-mono s-chip-white">NetVision Daemon</text>
 
         <rect x="410" y="0" width="126" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="473" y="15" text-anchor="middle" class="s-mono s-chip">TCP/IP Dissection</text>
+        <text x="473" y="15" text-anchor="middle" class="s-mono s-chip-body">TCP/IP Dissection</text>
 
         <rect x="544" y="0" width="128" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="608" y="15" text-anchor="middle" class="s-mono s-chip">iptables / Firewalls</text>
+        <text x="608" y="15" text-anchor="middle" class="s-mono s-chip-body">iptables / Firewalls</text>
       </g>
     </g>
 
@@ -66,26 +69,26 @@
     <g transform="translate(0, 80)">
       <rect width="852" height="62" rx="4" fill="#111722" stroke="#1c283c" stroke-width="1" />
       <line x1="0" y1="0" x2="4" y2="62" stroke="#FF304F" stroke-width="4" />
-      <text x="18" y="22" class="s-mono s-cat" fill="#FF304F">[+] OFFENSIVE OPERATIONS &amp; ADVERSARY SIMULATION</text>
+      <text x="18" y="22" class="s-mono s-cat-red">[+] OFFENSIVE OPERATIONS &amp; ADVERSARY SIMULATION</text>
       <!-- Chips -->
       <g transform="translate(18, 30)">
         <rect x="0" y="0" width="88" height="22" rx="3" fill="#162234" stroke="#FF304F" stroke-width="0.8" />
-        <text x="44" y="15" text-anchor="middle" class="s-mono s-chip">Metasploit</text>
+        <text x="44" y="15" text-anchor="middle" class="s-mono s-chip-white">Metasploit</text>
         
         <rect x="96" y="0" width="94" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="143" y="15" text-anchor="middle" class="s-mono s-chip">Burp Suite</text>
+        <text x="143" y="15" text-anchor="middle" class="s-mono s-chip-body">Burp Suite</text>
 
         <rect x="198" y="0" width="88" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="242" y="15" text-anchor="middle" class="s-mono s-chip">Kali Linux</text>
+        <text x="242" y="15" text-anchor="middle" class="s-mono s-chip-white">Kali Linux</text>
 
         <rect x="294" y="0" width="70" height="22" rx="3" fill="#162234" stroke="#FF304F" stroke-width="0.8" />
-        <text x="329" y="15" text-anchor="middle" class="s-mono s-chip">Hydra</text>
+        <text x="329" y="15" text-anchor="middle" class="s-mono s-chip-red">Hydra</text>
 
         <rect x="372" y="0" width="144" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="444" y="15" text-anchor="middle" class="s-mono s-chip">Privilege Escalation</text>
+        <text x="444" y="15" text-anchor="middle" class="s-mono s-chip-body">Privilege Escalation</text>
 
         <rect x="524" y="0" width="124" height="22" rx="3" fill="#162234" stroke="#00E5FF" stroke-width="0.8" />
-        <text x="586" y="15" text-anchor="middle" class="s-mono s-chip">MITRE ATT&amp;CK</text>
+        <text x="586" y="15" text-anchor="middle" class="s-mono s-chip-white">MITRE ATT&amp;CK</text>
       </g>
     </g>
 
@@ -93,26 +96,26 @@
     <g transform="translate(0, 150)">
       <rect width="852" height="62" rx="4" fill="#111722" stroke="#1c283c" stroke-width="1" />
       <line x1="0" y1="0" x2="4" y2="62" stroke="#00E5FF" stroke-width="4" />
-      <text x="18" y="22" class="s-mono s-cat">[+] DIGITAL FORENSICS &amp; INCIDENT RESPONSE (DFIR)</text>
+      <text x="18" y="22" class="s-mono s-cat-cyan">[+] DIGITAL FORENSICS &amp; INCIDENT RESPONSE (DFIR)</text>
       <!-- Chips -->
       <g transform="translate(18, 30)">
         <rect x="0" y="0" width="76" height="22" rx="3" fill="#162234" stroke="#00E5FF" stroke-width="0.8" />
-        <text x="38" y="15" text-anchor="middle" class="s-mono s-chip">Autopsy</text>
+        <text x="38" y="15" text-anchor="middle" class="s-mono s-chip-white">Autopsy</text>
         
         <rect x="84" y="0" width="98" height="22" rx="3" fill="#162234" stroke="#FF304F" stroke-width="0.8" />
-        <text x="133" y="15" text-anchor="middle" class="s-mono s-chip">Volatility 3</text>
+        <text x="133" y="15" text-anchor="middle" class="s-mono s-chip-red">Volatility 3</text>
 
         <rect x="190" y="0" width="94" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="237" y="15" text-anchor="middle" class="s-mono s-chip">FTK Imager</text>
+        <text x="237" y="15" text-anchor="middle" class="s-mono s-chip-body">FTK Imager</text>
 
         <rect x="292" y="0" width="134" height="22" rx="3" fill="#162234" stroke="#00E5FF" stroke-width="0.8" />
-        <text x="359" y="15" text-anchor="middle" class="s-mono s-chip">RAM Acquisition</text>
+        <text x="359" y="15" text-anchor="middle" class="s-mono s-chip-white">RAM Acquisition</text>
 
         <rect x="434" y="0" width="144" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="506" y="15" text-anchor="middle" class="s-mono s-chip">Timeline Forensics</text>
+        <text x="506" y="15" text-anchor="middle" class="s-mono s-chip-body">Timeline Forensics</text>
 
         <rect x="586" y="0" width="134" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="653" y="15" text-anchor="middle" class="s-mono s-chip">Log Correlation</text>
+        <text x="653" y="15" text-anchor="middle" class="s-mono s-chip-body">Log Correlation</text>
       </g>
     </g>
 
@@ -120,26 +123,26 @@
     <g transform="translate(0, 220)">
       <rect width="852" height="62" rx="4" fill="#111722" stroke="#1c283c" stroke-width="1" />
       <line x1="0" y1="0" x2="4" y2="62" stroke="#00E5FF" stroke-width="4" />
-      <text x="18" y="22" class="s-mono s-cat">[+] PROGRAMMING, SHELL &amp; KERNEL SCRIPTING</text>
+      <text x="18" y="22" class="s-mono s-cat-cyan">[+] PROGRAMMING, SHELL &amp; KERNEL SCRIPTING</text>
       <!-- Chips -->
       <g transform="translate(18, 30)">
         <rect x="0" y="0" width="80" height="22" rx="3" fill="#162234" stroke="#00E5FF" stroke-width="0.8" />
-        <text x="40" y="15" text-anchor="middle" class="s-mono s-chip">Python 3</text>
+        <text x="40" y="15" text-anchor="middle" class="s-mono s-chip-white">Python 3</text>
         
         <rect x="88" y="0" width="94" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="135" y="15" text-anchor="middle" class="s-mono s-chip">POSIX Bash</text>
+        <text x="135" y="15" text-anchor="middle" class="s-mono s-chip-body">POSIX Bash</text>
 
         <rect x="190" y="0" width="76" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="228" y="15" text-anchor="middle" class="s-mono s-chip">C / C++</text>
+        <text x="228" y="15" text-anchor="middle" class="s-mono s-chip-white">C / C++</text>
 
         <rect x="274" y="0" width="96" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="322" y="15" text-anchor="middle" class="s-mono s-chip">PowerShell</text>
+        <text x="322" y="15" text-anchor="middle" class="s-mono s-chip-body">PowerShell</text>
 
         <rect x="378" y="0" width="64" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="410" y="15" text-anchor="middle" class="s-mono s-chip">SQL</text>
+        <text x="410" y="15" text-anchor="middle" class="s-mono s-chip-body">SQL</text>
 
         <rect x="450" y="0" width="114" height="22" rx="3" fill="#162234" stroke="#00E5FF" stroke-width="0.8" />
-        <text x="507" y="15" text-anchor="middle" class="s-mono s-chip">Raw Sockets</text>
+        <text x="507" y="15" text-anchor="middle" class="s-mono s-chip-white">Raw Sockets</text>
       </g>
     </g>
 
@@ -147,26 +150,26 @@
     <g transform="translate(0, 290)">
       <rect width="852" height="62" rx="4" fill="#111722" stroke="#1c283c" stroke-width="1" />
       <line x1="0" y1="0" x2="4" y2="62" stroke="#FF304F" stroke-width="4" />
-      <text x="18" y="22" class="s-mono s-cat" fill="#FF304F">[+] APPLIED CRYPTOGRAPHY &amp; SECURITY INFRASTRUCTURE</text>
+      <text x="18" y="22" class="s-mono s-cat-red">[+] APPLIED CRYPTOGRAPHY &amp; SECURITY INFRASTRUCTURE</text>
       <!-- Chips -->
       <g transform="translate(18, 30)">
         <rect x="0" y="0" width="108" height="22" rx="3" fill="#162234" stroke="#00E5FF" stroke-width="0.8" />
-        <text x="54" y="15" text-anchor="middle" class="s-mono s-chip">AES-256-GCM</text>
+        <text x="54" y="15" text-anchor="middle" class="s-mono s-chip-white">AES-256-GCM</text>
         
         <rect x="116" y="0" width="84" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="158" y="15" text-anchor="middle" class="s-mono s-chip">RSA-4096</text>
+        <text x="158" y="15" text-anchor="middle" class="s-mono s-chip-body">RSA-4096</text>
 
         <rect x="208" y="0" width="76" height="22" rx="3" fill="#162234" stroke="#FF304F" stroke-width="0.8" />
-        <text x="246" y="15" text-anchor="middle" class="s-mono s-chip">TLS 1.3</text>
+        <text x="246" y="15" text-anchor="middle" class="s-mono s-chip-red">TLS 1.3</text>
 
         <rect x="292" y="0" width="70" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="327" y="15" text-anchor="middle" class="s-mono s-chip">Docker</text>
+        <text x="327" y="15" text-anchor="middle" class="s-mono s-chip-body">Docker</text>
 
         <rect x="370" y="0" width="56" height="22" rx="3" fill="#162234" stroke="#25354e" stroke-width="0.8" />
-        <text x="398" y="15" text-anchor="middle" class="s-mono s-chip">Git</text>
+        <text x="398" y="15" text-anchor="middle" class="s-mono s-chip-body">Git</text>
 
         <rect x="434" y="0" width="124" height="22" rx="3" fill="#162234" stroke="#00E5FF" stroke-width="0.8" />
-        <text x="496" y="15" text-anchor="middle" class="s-mono s-chip">GitHub Actions</text>
+        <text x="496" y="15" text-anchor="middle" class="s-mono s-chip-white">GitHub Actions</text>
       </g>
     </g>
 

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="100%">
   <defs>
     <linearGradient id="termVoid" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#080A0F" />
@@ -6,18 +6,19 @@
     </linearGradient>
     <linearGradient id="topRim" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.9" />
-      <stop offset="70%" stop-color="#00E5FF" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#00C8FF" stop-opacity="0.4" />
       <stop offset="100%" stop-color="#FF304F" stop-opacity="0.9" />
     </linearGradient>
   </defs>
 
   <style>
-    .t-code { font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace; font-size: 13px; }
-    .t-dim { fill: #485c7b; }
+    .t-code { font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace; font-size: 12.5px; }
+    .t-dim { fill: #9CA3AF; }
     .t-cyan { fill: #00E5FF; }
+    .t-sec { fill: #00C8FF; }
     .t-red { fill: #FF304F; font-weight: 700; }
-    .t-white { fill: #FFFFFF; font-weight: 500; }
-    .t-gray { fill: #8B949E; }
+    .t-white { fill: #FFFFFF; font-weight: 600; }
+    .t-body { fill: #D1D5DB; }
     
     @keyframes blinkCursor {
       0%, 49% { opacity: 1; }
@@ -25,11 +26,11 @@
     }
     .cursor { animation: blinkCursor 0.8s infinite; }
 
-    @keyframes fadeLine1 { 0%, 5% { opacity: 0; transform: translateX(-5px); } 12%, 100% { opacity: 1; transform: translateX(0); } }
-    @keyframes fadeLine2 { 0%, 20% { opacity: 0; transform: translateX(-5px); } 30%, 100% { opacity: 1; transform: translateX(0); } }
-    @keyframes fadeLine3 { 0%, 40% { opacity: 0; transform: translateX(-5px); } 50%, 100% { opacity: 1; transform: translateX(0); } }
-    @keyframes fadeLine4 { 0%, 60% { opacity: 0; transform: translateX(-5px); } 70%, 100% { opacity: 1; transform: translateX(0); } }
-    @keyframes fadeLine5 { 0%, 80% { opacity: 0; transform: translateX(-5px); } 90%, 100% { opacity: 1; transform: translateX(0); } }
+    @keyframes fadeLine1 { 0%, 5% { opacity: 0; } 12%, 100% { opacity: 1; } }
+    @keyframes fadeLine2 { 0%, 20% { opacity: 0; } 30%, 100% { opacity: 1; } }
+    @keyframes fadeLine3 { 0%, 40% { opacity: 0; } 50%, 100% { opacity: 1; } }
+    @keyframes fadeLine4 { 0%, 60% { opacity: 0; } 70%, 100% { opacity: 1; } }
+    @keyframes fadeLine5 { 0%, 80% { opacity: 0; } 90%, 100% { opacity: 1; } }
 
     .line-1 { animation: fadeLine1 10s infinite; }
     .line-2 { animation: fadeLine2 10s infinite; }
@@ -39,7 +40,7 @@
   </style>
 
   <!-- Frame Background -->
-  <rect width="900" height="240" rx="8" fill="url(#termVoid)" stroke="#162032" stroke-width="1.2" />
+  <rect width="900" height="230" rx="8" fill="url(#termVoid)" stroke="#162032" stroke-width="1.2" />
 
   <!-- Window Top Bar -->
   <path d="M 0 8 C 0 3.58 3.58 0 8 0 L 892 0 C 896.42 0 900 3.58 900 8 L 900 34 L 0 34 Z" fill="#111722" stroke="#162032" stroke-width="1" />
@@ -50,62 +51,60 @@
   <circle cx="36" cy="17" r="4.5" fill="#eab308" />
   <circle cx="52" cy="17" r="4.5" fill="#00E5FF" />
 
-  <!-- Title -->
-  <text x="450" y="21" fill="#667a99" font-size="11" font-weight="600" text-anchor="middle" class="t-code">
+  <!-- Title: Section Heading in Bright Cyan (#00C8FF) -->
+  <text x="450" y="21" fill="#00C8FF" font-size="11" font-weight="600" text-anchor="middle" class="t-code">
     session: kg-sec-kernel // pid: 9042 // bash
   </text>
   <text x="876" y="21" fill="#FF304F" font-size="10" font-weight="700" text-anchor="end" class="t-code">LIVE_FEED</text>
 
-  <!-- Terminal Output -->
-  <g transform="translate(24, 64)">
-    <!-- Line 1 -->
-    <g class="line-1">
-      <text x="0" y="0" class="t-code">
-        <tspan class="t-dim">[09:08:11]</tspan>
-        <tspan class="t-cyan"> &gt; INITIATING_SOC_SESSION </tspan>
-        <tspan class="t-white">--target lab.kartikgurung.sec</tspan>
-        <tspan class="t-dim"> ... </tspan>
-        <tspan class="t-cyan">[AUTHENTICATED]</tspan>
-      </text>
-    </g>
+  <!-- Terminal Output Lines -->
+  <!-- Line 1 -->
+  <g class="line-1" transform="translate(24, 66)">
+    <text x="0" y="0" class="t-code">
+      <tspan class="t-dim">[09:22:42]</tspan>
+      <tspan class="t-cyan"> &gt; INITIATING_SOC_SESSION </tspan>
+      <tspan class="t-body">--target lab.kartikgurung.sec</tspan>
+      <tspan class="t-dim"> ... </tspan>
+      <tspan class="t-sec">[AUTHENTICATED]</tspan>
+    </text>
+  </g>
 
-    <!-- Line 2 -->
-    <g class="line-2" transform="translate(0, 26)">
-      <text x="0" y="0" class="t-code">
-        <tspan class="t-dim">[09:08:12]</tspan>
-        <tspan class="t-cyan"> &gt; OPERATOR_IDENTITY: </tspan>
-        <tspan class="t-white" font-weight="700">Kartik Gurung</tspan>
-        <tspan class="t-gray"> // B.Tech CSE (Cybersecurity Specialization)</tspan>
-      </text>
-    </g>
+  <!-- Line 2 -->
+  <g class="line-2" transform="translate(24, 96)">
+    <text x="0" y="0" class="t-code">
+      <tspan class="t-dim">[09:22:43]</tspan>
+      <tspan class="t-cyan"> &gt; OPERATOR_IDENTITY: </tspan>
+      <tspan class="t-white">Kartik Gurung</tspan>
+      <tspan class="t-body"> // B.Tech CSE (Cybersecurity Specialization)</tspan>
+    </text>
+  </g>
 
-    <!-- Line 3 -->
-    <g class="line-3" transform="translate(0, 52)">
-      <text x="0" y="0" class="t-code">
-        <tspan class="t-dim">[09:08:13]</tspan>
-        <tspan class="t-cyan"> &gt; PRIMARY_MISSION: </tspan>
-        <tspan class="t-white">Digital Forensics (DFIR) &amp; Adversary Simulation &amp; Network Defense</tspan>
-      </text>
-    </g>
+  <!-- Line 3 -->
+  <g class="line-3" transform="translate(24, 126)">
+    <text x="0" y="0" class="t-code">
+      <tspan class="t-dim">[09:22:44]</tspan>
+      <tspan class="t-cyan"> &gt; PRIMARY_MISSION: </tspan>
+      <tspan class="t-body">Digital Forensics (DFIR) • Adversary Emulation • Protocol Security</tspan>
+    </text>
+  </g>
 
-    <!-- Line 4 -->
-    <g class="line-4" transform="translate(0, 78)">
-      <text x="0" y="0" class="t-code">
-        <tspan class="t-dim">[09:08:14]</tspan>
-        <tspan class="t-cyan"> &gt; CORE_FRAMEWORK: </tspan>
-        <tspan class="t-red">NetVision</tspan>
-        <tspan class="t-gray"> [Real-Time Packet Dissection &amp; Threat Telemetry Engine]</tspan>
-      </text>
-    </g>
+  <!-- Line 4 -->
+  <g class="line-4" transform="translate(24, 156)">
+    <text x="0" y="0" class="t-code">
+      <tspan class="t-dim">[09:22:45]</tspan>
+      <tspan class="t-cyan"> &gt; CORE_FRAMEWORK: </tspan>
+      <tspan class="t-red">NetVision</tspan>
+      <tspan class="t-body"> [Real-Time Packet Dissection &amp; Threat Telemetry Engine]</tspan>
+    </text>
+  </g>
 
-    <!-- Line 5 -->
-    <g class="line-5" transform="translate(0, 104)">
-      <text x="0" y="0" class="t-code">
-        <tspan class="t-dim">[09:08:15]</tspan>
-        <tspan class="t-cyan"> &gt; STATUS: </tspan>
-        <tspan class="t-white">DEFENSIVE ENGINE DEPLOYED // STANDBY FOR SECURITY RESEARCH &gt;&gt;</tspan>
-        <tspan class="t-red cursor"> █</tspan>
-      </text>
-    </g>
+  <!-- Line 5 -->
+  <g class="line-5" transform="translate(24, 186)">
+    <text x="0" y="0" class="t-code">
+      <tspan class="t-dim">[09:22:46]</tspan>
+      <tspan class="t-cyan"> &gt; STATUS: </tspan>
+      <tspan class="t-body">DEFENSIVE ENGINE DEPLOYED // STANDBY FOR SECURITY RESEARCH &gt;&gt;</tspan>
+      <tspan class="t-red cursor"> █</tspan>
+    </text>
   </g>
 </svg>
