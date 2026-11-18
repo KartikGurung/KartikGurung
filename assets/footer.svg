@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="footBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080A0F" />
+      <stop offset="100%" stop-color="#05070A" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .f-mono { font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace; font-size: 11px; }
+  </style>
+
+  <!-- Frame Background -->
+  <rect width="900" height="64" rx="6" fill="url(#footBg)" stroke="#162032" stroke-width="1.2" />
+
+  <g transform="translate(24, 26)">
+    <text x="0" y="0" fill="#00E5FF" font-weight="700" class="f-mono">// TRANSMISSION TERMINATED ::</text>
+    <text x="230" y="0" fill="#FF304F" font-weight="700" class="f-mono">KERNEL HALTED [STATUS: 0x00]</text>
+    <text x="852" y="0" fill="#485c7b" text-anchor="end" class="f-mono">HASH: SHA256: 9e8a...31b0c</text>
+  </g>
+
+  <g transform="translate(24, 46)">
+    <text x="0" y="0" fill="#667a99" font-size="9.5" class="f-mono">ENGINEERED FOR HIGH-ASSURANCE CYBERSECURITY RESEARCH &amp; DEFENSIVE PROTOCOL PRECISION.</text>
+  </g>
+</svg>

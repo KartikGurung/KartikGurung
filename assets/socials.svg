@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 58" width="100%" height="100%">
+  <defs>
+    <linearGradient id="socBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080A0F" />
+      <stop offset="100%" stop-color="#0E1420" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .soc-mono { font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+  </style>
+
+  <!-- Solid Dark Bar Canvas -->
+  <rect width="900" height="58" rx="6" fill="url(#socBg)" stroke="#162032" stroke-width="1.2" />
+
+  <g transform="translate(18, 14)">
+    <!-- 1: LinkedIn -->
+    <g transform="translate(0, 0)">
+      <rect width="160" height="30" rx="4" fill="#111722" stroke="#0077B5" stroke-width="1" />
+      <circle cx="14" cy="15" r="3" fill="#0077B5" />
+      <text x="26" y="19" fill="#f8fafc" class="soc-mono">LINKEDIN</text>
+      <text x="145" y="19" fill="#0077B5" class="soc-mono" text-anchor="end">↗</text>
+    </g>
+
+    <!-- 2: Gmail -->
+    <g transform="translate(174, 0)">
+      <rect width="180" height="30" rx="4" fill="#111722" stroke="#FF304F" stroke-width="1" />
+      <circle cx="14" cy="15" r="3" fill="#FF304F" />
+      <text x="26" y="19" fill="#f8fafc" class="soc-mono">GMAIL COMM</text>
+      <text x="165" y="19" fill="#FF304F" class="soc-mono" text-anchor="end">↗</text>
+    </g>
+
+    <!-- 3: GitHub -->
+    <g transform="translate(368, 0)">
+      <rect width="150" height="30" rx="4" fill="#111722" stroke="#00E5FF" stroke-width="1" />
+      <circle cx="14" cy="15" r="3" fill="#00E5FF" />
+      <text x="26" y="19" fill="#f8fafc" class="soc-mono">GITHUB</text>
+      <text x="135" y="19" fill="#00E5FF" class="soc-mono" text-anchor="end">↗</text>
+    </g>
+
+    <!-- 4: TryHackMe -->
+    <g transform="translate(532, 0)">
+      <rect width="164" height="30" rx="4" fill="#111722" stroke="#FF304F" stroke-width="1" />
+      <circle cx="14" cy="15" r="3" fill="#FF304F" />
+      <text x="26" y="19" fill="#f8fafc" class="soc-mono">TRYHACKME</text>
+      <text x="149" y="19" fill="#FF304F" class="soc-mono" text-anchor="end">↗</text>
+    </g>
+
+    <!-- 5: HackTheBox -->
+    <g transform="translate(710, 0)">
+      <rect width="154" height="30" rx="4" fill="#111722" stroke="#00E5FF" stroke-width="1" />
+      <circle cx="14" cy="15" r="3" fill="#00E5FF" />
+      <text x="26" y="19" fill="#f8fafc" class="soc-mono">HACKTHEBOX</text>
+      <text x="139" y="19" fill="#00E5FF" class="soc-mono" text-anchor="end">↗</text>
+    </g>
+  </g>
+</svg>

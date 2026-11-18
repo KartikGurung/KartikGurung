@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dossierBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080A0F" />
+      <stop offset="60%" stop-color="#0B0F17" />
+      <stop offset="100%" stop-color="#080A0F" />
+    </linearGradient>
+
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="70%" stop-color="#00E5FF" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#FF304F" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .d-mono { font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace; }
+    .d-key { fill: #00E5FF; font-weight: 700; font-size: 11px; }
+    .d-val { fill: #f8fafc; font-weight: 500; font-size: 11px; }
+    .d-tag { fill: #8B949E; font-size: 11px; }
+    .d-accent { fill: #FF304F; font-weight: 700; }
+  </style>
+
+  <!-- Solid Dark Frame Canvas -->
+  <rect width="900" height="280" rx="8" fill="url(#dossierBg)" stroke="#162032" stroke-width="1.5" />
+
+  <!-- Top Bar -->
+  <rect width="900" height="34" rx="8" fill="#111722" stroke="#162032" stroke-width="1" />
+  <line x1="0" y1="34" x2="900" y2="34" stroke="url(#headerGrad)" stroke-width="1.2" />
+
+  <!-- Header Title -->
+  <text x="24" y="21" fill="#00E5FF" font-size="11" font-weight="700" letter-spacing="1.5" class="d-mono">
+    [ SYSTEM DOSSIER ] :: OPERATOR ARCHITECTURE &amp; RECONNAISSANCE
+  </text>
+  <text x="876" y="21" fill="#FF304F" font-size="10" font-weight="700" text-anchor="end" letter-spacing="1" class="d-mono">
+    CLEARANCE LEVEL 4 // DEFCON 3
+  </text>
+
+  <!-- Inner Information Grid -->
+  <g transform="translate(24, 60)">
+    <!-- Row 1: Identity -->
+    <g transform="translate(0, 0)">
+      <rect width="180" height="26" rx="3" fill="#111722" stroke="#1c273a" stroke-width="1" />
+      <text x="12" y="17" class="d-mono d-key">OPERATOR IDENTITY</text>
+      <text x="200" y="17" class="d-mono d-val">Kartik Gurung</text>
+      <text x="320" y="17" class="d-mono d-tag">// Security Researcher &amp; Protocol Engineer</text>
+    </g>
+
+    <!-- Row 2: Academic Track -->
+    <g transform="translate(0, 36)">
+      <rect width="180" height="26" rx="3" fill="#111722" stroke="#1c273a" stroke-width="1" />
+      <text x="12" y="17" class="d-mono d-key">ACADEMIC ROOT</text>
+      <text x="200" y="17" class="d-mono d-val">B.Tech in Computer Science &amp; Engineering</text>
+      <text x="540" y="17" class="d-mono d-accent">[ Cybersecurity Specialization ]</text>
+    </g>
+
+    <!-- Row 3: Core Directives -->
+    <g transform="translate(0, 72)">
+      <rect width="180" height="26" rx="3" fill="#111722" stroke="#1c273a" stroke-width="1" />
+      <text x="12" y="17" class="d-mono d-key">FOCUS VECTORS</text>
+      <text x="200" y="17" class="d-mono d-val">Deep Packet Inspection (DPI) • Digital Forensics (DFIR) • Adversary Emulation</text>
+    </g>
+
+    <!-- Row 4: Flagship Framework -->
+    <g transform="translate(0, 108)">
+      <rect width="180" height="26" rx="3" fill="#111722" stroke="#1c273a" stroke-width="1" />
+      <text x="12" y="17" class="d-mono d-key">PRIMARY ENGINE</text>
+      <text x="200" y="17" class="d-mono d-accent">NetVision Daemon</text>
+      <text x="330" y="17" class="d-mono d-tag">[ Real-time Packet Telemetry, Live Tap &amp; Anomaly Detection ]</text>
+    </g>
+
+    <!-- Row 5: Operational Philosophy -->
+    <g transform="translate(0, 144)">
+      <rect width="180" height="26" rx="3" fill="#111722" stroke="#1c273a" stroke-width="1" />
+      <text x="12" y="17" class="d-mono d-key">SECURITY POSTURE</text>
+      <text x="200" y="17" class="d-mono d-val">Defense-in-Depth // Zero-Trust Principles // Automated Threat Hunting</text>
+    </g>
+  </g>
+
+  <!-- Bottom Terminal Status Bar inside card -->
+  <g transform="translate(24, 240)">
+    <rect width="852" height="24" rx="3" fill="#0c111a" stroke="#162032" stroke-width="1" />
+    <text x="14" y="16" fill="#485c7b" font-size="9.5" class="d-mono">TELEMETRY STATUS:</text>
+    <text x="135" y="16" fill="#00E5FF" font-size="9.5" font-weight="700" class="d-mono">PROMISCUOUS TAP ACTIVE</text>
+    <text x="340" y="16" fill="#485c7b" font-size="9.5" class="d-mono">CIPHER:</text>
+    <text x="390" y="16" fill="#f8fafc" font-size="9.5" class="d-mono">AES-256-GCM / TLS 1.3</text>
+    <text x="838" y="16" fill="#FF304F" font-size="9.5" font-weight="700" text-anchor="end" class="d-mono">● LIVE_FEED</text>
+  </g>
+</svg>
